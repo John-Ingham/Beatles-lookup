@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Homepage from './components/Homepage'
+import Songs from './components/Songs'
+import Lyrics from './components/Lyrics'
+import Header from './components/Header'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { render } from 'react-dom'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const rootElement = document.getElementById('root')
+
+render(
+  <BrowserRouter>
+    <Header />
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="songs" element={<Songs />} />
+      <Route path="lyrics" element={<Lyrics />} />
+    </Routes>
+  </BrowserRouter>,
+  rootElement,
+)
