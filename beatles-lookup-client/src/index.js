@@ -7,6 +7,7 @@ import Homepage from './components/Homepage'
 import Songs from './components/Songs'
 import Lyrics from './components/Lyrics'
 import Header from './components/Header'
+import BandPhoto from './components/BandPhoto'
 
 import { render } from 'react-dom'
 
@@ -20,6 +21,7 @@ render(
       <Route path="/" element={<Homepage />} />
       <Route path="songs" element={<Songs />} />
       <Route path="lyrics" element={<Lyrics />} />
+      <Route path="bandphoto" element={<BandPhoto />} />
     </Routes>
   </BrowserRouter>,
   rootElement,
