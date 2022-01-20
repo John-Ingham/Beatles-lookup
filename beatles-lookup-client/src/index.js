@@ -20,7 +20,8 @@ render(
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="songs" element={<Songs />} />
-      <Route path="lyrics" element={<Lyrics />} />
+      {/* <Route path="lyrics" element={<Lyrics />} /> */}
+      <Route path="lyrics/:song_id" element={<Lyrics />} />
       <Route path="bandphoto" element={<BandPhoto />} />
     </Routes>
   </BrowserRouter>,

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 const Songs = () => {
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
+  const [song, setSong] = useState('')
 
   useEffect(() => {
     setLoading(true)
@@ -15,8 +16,9 @@ const Songs = () => {
       setLoading(false)
     })
   }, [])
+
   return (
-    <div classname="songsbox">
+    <div className="songsbox">
       <img className="sheetMusicPic" src={sheetmusic2} alt="sheet music" />
       {loading ? (
         <img
@@ -27,10 +29,10 @@ const Songs = () => {
       ) : (
         <section>
           <h2 className="header2s"> Songs List</h2>
-          <ul classname="lists">
+          <ul className="lists">
             {data.map((song) => {
               return (
-                <li className="listItems" key={data.song}>
+                <li className="listItems" key={song.song_id}>
                   <img
                     className="musicThumbnail"
                     src="https://cancerfocusni.org/wp-content/uploads/2019/10/Music-Notes-300-x-200-Event-page-thumbnail.png"
@@ -38,15 +40,16 @@ const Songs = () => {
                     width="100"
                     height="100"
                   />
-                  <h3>SONG NAME: {song.song}</h3>
-                  <p>Written by: {song.writer}</p>
-                  <Link to={'lyrics'}>
-                    <button className="button">
+                  <h2>SONG NAME: {song.song}</h2>
+                  <h4>Written by: {song.writer}</h4>
+                  <Link to={`/lyrics/${song.song_id}`}>
+                    <button
+                      className="button"
+                      onClick={() => setSong(song.song)}
+                    >
                       View Lyrics for {song.song}
                     </button>
                   </Link>
-
-                  <span>{song.lyrics}</span>
                 </li>
               )
             })}
