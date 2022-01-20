@@ -3,7 +3,7 @@
 }
 
 .header {
-  background-color: #6f8ecc;
+  background-color: #eeb766;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -11,6 +11,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-decoration: none;
 }
 .navigation {
   display: flex;
@@ -27,6 +28,20 @@
   flex-wrap: wrap;
   margin: 0px 30px 0px 30px;
   color: rgb(75, 42, 5);
+}
+.button {
+  display: flex;
+
+  flex-wrap: wrap;
+  background-color: rgb(212, 157, 104);
+  color: rgb(75, 52, 4);
+  border: 5px solid rgb(223, 200, 124);
+  padding: 25px 25px 25px 25px;
+  /* margin: 1.5em 3em 1.5em 3em; */
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: 150ms;
+  margin: 1em 0;
 }
 .button1 {
   display: flex;
@@ -84,7 +99,7 @@ button:hover {
 }
 .songsbox {
   border: rgb(58, 48, 3) solid 10px;
-  height: 55px;
+
   display: flex;
   flex-wrap: wrap;
   border: 10px solid rgb(27, 15, 2);
@@ -92,6 +107,28 @@ button:hover {
 }
 .sheetMusicpic {
   border: rgb(27, 15, 2) solid 5px;
+  display: flex;
+  justify-content: center;
+}
+.lyricsContainer {
+  border: rgb(156, 94, 22) solid 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(212, 157, 104);
+  justify-content: center;
+}
+.listItems {
+  border: rgb(75, 42, 5) solid 2px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(230, 172, 106);
+  padding: 1.5em;
+  margin: 0.2em;
+}
+.musicScroll {
+  border: rgb(75, 42, 5) solid 3px;
   display: flex;
   justify-content: center;
 }

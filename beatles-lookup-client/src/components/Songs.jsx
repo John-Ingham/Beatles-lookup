@@ -19,7 +19,9 @@ const Songs = () => {
 
   return (
     <div className="songsbox">
-      <img className="sheetMusicPic" src={sheetmusic2} alt="sheet music" />
+      <div className="musicScroll">
+        <img className="sheetMusicPic" src={sheetmusic2} alt="sheet music" />
+      </div>
       {loading ? (
         <img
           className="loading"
